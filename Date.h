@@ -43,4 +43,5 @@ public:
 	Date& operator--(int);
 	bool operator==(Date&);
 	int& operator[](int);
+	Date& operator=(Date&);
 };
