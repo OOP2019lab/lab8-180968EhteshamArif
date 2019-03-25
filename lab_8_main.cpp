@@ -1,4 +1,3 @@
-#include <iostream>
 #include "Date.h"
 using namespace std;
 
@@ -25,8 +24,11 @@ int main()
 	
 	// Overload the << operator to perform the following printing
 	cout << "Date 1 is " << d1; // prints December 27, 2010
+	cout<<endl;
 	cout << "Date 2 is " << d2; // prints January 1, 2000
+	cout<<endl;
 	cout << "Date 3 is " << d3; // prints January 1, 2000
+	cout<<endl;
 
 	// Overload equality operator == 
 	if (d2 == d3)
@@ -35,42 +37,53 @@ int main()
 	}
 	else
 	{
-		cout << "Date 2" << d2 << " and Date 3 " << d3 << " are not equal";
+		cout << "Date 2 " << d2 << " and Date 3 " << d3 << " are not equal";
 	}
-
+	cout<<endl;
+	cout<<"Enter the date as dd mm year :";
 	// Overload the stream insertion operator >> 
 	cin >> d3; // Enter todays date
 	cout << "Date 3 is changed and now is " << d3;
-
+	cout<<endl;
 	if (d2 == d3)
 	{
 		cout << "Date 2 " << d2 << " and Date 3 " << d3 << " are equal";
 	}
 	else
 	{
-		cout << "Date 2" << d2 << " and Date 3 " << d3 << " are not equal";
+		cout << "Date 2 " << d2 << " and Date 3 " << d3 << " are not equal";
 	}
-
+	cout<<endl;
 	// Overload the addition operator + to add days to date
 	// Overload the assignment operator "=", to store the result
 	d1 = d1 + 1; // This adds a day to date d1 and stores it pack in d1
 	cout << "Date 1 is " << d1; // prints December 28, 2010
-
+	cout<<endl;
 	d1 = d1 + 3;
 	cout << "Date 1 is " << d1; // prints January, 2011
-
+	cout<<endl;
 	//Overload the prefix decrement operator "--object"
-	cout << " Testing the prefix decrement operator" << endl;
+	cout << "Testing the prefix decrement operator" << endl;
 	cout << "d3 is " << d3 << endl;
+	cout<<endl;
 	cout << "--d3 is " << --d3 << endl;
+	cout<<endl;
 	cout << "d3 is " << d3 << endl;
-
+	cout<<endl;
 	//Overload the postfix decrement operator "--object"
-	cout << " Testing the postfix decrement operator" << endl;
+	cout << "Testing the postfix decrement operator" << endl;
 	cout << "d3 is " << d3 << endl;
 	cout << "d3-- is " << d3-- << endl;
 	cout << "d3 is " << d3 << endl;
 
+	//Overload the subscript operator, [], for example.
+
+	Date d6(12,30,2019);
+
+	cout << "Day :" << d1[0]<<endl; //return day i.e 30
+	cout << "Month :" << d1[1]<<endl; //return month i.e 12
+	cout << "Year :" << d1[2]<<endl; //return year i.e 2019
+	// giving Any other index should give 0 and print message that index can only be 0, 1 or 2.
 	system("pause");
 	return 0;
 }
