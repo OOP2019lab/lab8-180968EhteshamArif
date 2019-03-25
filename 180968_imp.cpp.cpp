@@ -92,3 +92,10 @@ int& Date::operator[](int a)
 	   }
 	}
 }
+Date& Date::operator=(Date& a)
+{
+	this->day=a.day;
+	this->month=a.month;
+	this->year=a.year;
+	return *this;
+}
